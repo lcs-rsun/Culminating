@@ -72,30 +72,44 @@ let turtle = Tortoise(drawingUpon: canvas)
 //drawPolygon(withSideLength: 90, withSides: 6)
 
 
+// Create a function of drawing arrow
+func drawArrow() {
+//    // Set the coordinate
+//    turtle.penUp()
+//    turtle.forward(steps: 200)
+//    turtle.left(by: 90)
+//    turtle.forward(steps: 200)
+//    turtle.right(by: 90)
+//    turtle.penDown()
 
-// Set the coordinate
-turtle.penUp()
-turtle.forward(steps: 200)
-turtle.left(by: 90)
-turtle.forward(steps: 200)
-turtle.right(by: 90)
-turtle.penDown()
+    // Draw an arrow
+    turtle.forward(steps: 125)
+    turtle.right(by: 90)
+    turtle.forward(steps: 25)
+    turtle.left(by: 123.69)
+    turtle.forward(steps: Int(90.14))
+    turtle.left(by: 112.62)
+    turtle.forward(steps: Int(90.14))
+    turtle.left(by: 123.69)
+    turtle.forward(steps: 25)
+    turtle.right(by: 90)
+    turtle.forward(steps: 125)
+    turtle.left(by: 90)
+    turtle.forward(steps: 50)
+    turtle.left(by: 90)
+    turtle.drawSelf()
+    
+    // To make space for the next arrow
+    turtle.left(by: 90)
+    turtle.forward(steps: 100)
+    turtle.right(by: 90)
 
-// Draw an arrow
-turtle.forward(steps: 125)
-turtle.right(by: 90)
-turtle.forward(steps: 25)
-turtle.left(by: 123.69)
-turtle.forward(steps: Int(90.14))
-turtle.left(by: 112.62)
-turtle.forward(steps: Int(90.14))
-turtle.left(by: 123.69)
-turtle.forward(steps: 25)
-turtle.right(by: 90)
-turtle.forward(steps: 125)
-turtle.left(by: 90)
-turtle.forward(steps: 50)
-turtle.left(by: 90)
+    
+}
+
+for _ in 1...5 {
+    drawArrow()
+}
 /*:
  ## Show the Assistant Editor
  Don't see any results?
