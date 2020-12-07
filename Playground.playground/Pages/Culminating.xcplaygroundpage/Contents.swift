@@ -16,7 +16,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 500
+let preferredWidth = 600
 let preferredHeight = 500
 /*:
  ## Required code
@@ -97,19 +97,38 @@ func drawArrow() {
     turtle.left(by: 90)
     turtle.forward(steps: 50)
     turtle.left(by: 90)
-    turtle.drawSelf()
+//    turtle.drawSelf()
     
     // To make space for the next arrow
+    turtle.penUp()
     turtle.left(by: 90)
     turtle.forward(steps: 100)
     turtle.right(by: 90)
-
+    turtle.penDown()
     
 }
 
-for _ in 1...5 {
-    drawArrow()
+// Create a function of a column of arrow
+func drawColumnOfArrows() {
+    
+    for _ in 1...6 {
+        drawArrow()
+    }
+    turtle.penUp()
+    turtle.forward(steps: 200)
+    turtle.right(by: 90)
+    turtle.forward(steps: 600)
+    turtle.left(by: 90)
+    turtle.penDown()
 }
+
+for _ in 1...3 {
+    drawColumnOfArrows()
+}
+    
+    
+
+
 /*:
  ## Show the Assistant Editor
  Don't see any results?
