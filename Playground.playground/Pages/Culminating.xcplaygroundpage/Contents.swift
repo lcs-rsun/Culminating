@@ -16,8 +16,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 300
-let preferredHeight = 600
+let preferredWidth = 500
+let preferredHeight = 500
 /*:
  ## Required code
  
@@ -48,33 +48,54 @@ PlaygroundPage.current.liveView = canvas
 // Creaet a turtle to use
 let turtle = Tortoise(drawingUpon: canvas)
 
-// Draw a square the hard way
-for  _ in 1...4 {
-    turtle.forward(steps: 50)
-    turtle.left(by: 90)
-}
-
-// Draw an "n" side of polygon
-func drawPolygon(withSideLength l : Int,
-                 withSides n: Int) {
-    
-    let interiorAngle: Degrees = ((Degrees(n) - 2) * 180) / Degrees(n)
-    
-    let exteriorAngle = 180 - interiorAngle
-    
-    for _ in 1...n {
-        turtle.forward(steps: l)
-        turtle.left (by: exteriorAngle)
-    }
-}
-
-//Make a polygon
-drawPolygon(withSideLength: 90, withSides: 6)
-
-
+//// Draw a square the hard way
+//for  _ in 1...4 {
+//    turtle.forward(steps: 50)
+//    turtle.left(by: 90)
+//}
+//
+//// Draw an "n" side of polygon
+//func drawPolygon(withSideLength l : Int,
+//                 withSides n: Int) {
+//
+//    let interiorAngle: Degrees = ((Degrees(n) - 2) * 180) / Degrees(n)
+//
+//    let exteriorAngle = 180 - interiorAngle
+//
+//    for _ in 1...n {
+//        turtle.forward(steps: l)
+//        turtle.left (by: exteriorAngle)
+//    }
+//}
+//
+////Make a polygon
+//drawPolygon(withSideLength: 90, withSides: 6)
 
 
 
+// Set the coordinate
+turtle.penUp()
+turtle.forward(steps: 200)
+turtle.left(by: 90)
+turtle.forward(steps: 200)
+turtle.right(by: 90)
+turtle.penDown()
+
+// Draw an arrow
+turtle.forward(steps: 125)
+turtle.right(by: 90)
+turtle.forward(steps: 25)
+turtle.left(by: 123.69)
+turtle.forward(steps: Int(90.14))
+turtle.left(by: 112.62)
+turtle.forward(steps: Int(90.14))
+turtle.left(by: 123.69)
+turtle.forward(steps: 25)
+turtle.right(by: 90)
+turtle.forward(steps: 125)
+turtle.left(by: 90)
+turtle.forward(steps: 50)
+turtle.left(by: 90)
 /*:
  ## Show the Assistant Editor
  Don't see any results?
