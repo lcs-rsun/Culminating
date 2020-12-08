@@ -73,6 +73,12 @@ let turtle = Tortoise(drawingUpon: canvas)
 
 
 // Create a function of drawing arrow
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 25)
+turtle.right(by: 90)
+turtle.penDown()
+
 func drawArrow() {
 //    // Set the coordinate
 //    turtle.penUp()
@@ -111,13 +117,13 @@ func drawArrow() {
 // Create a function of a column of arrow
 func drawColumnOfArrows() {
     
-    for _ in 1...6 {
+    for _ in 1...5 {
         drawArrow()
     }
     turtle.penUp()
     turtle.forward(steps: 200)
     turtle.right(by: 90)
-    turtle.forward(steps: 600)
+    turtle.forward(steps: 500)
     turtle.left(by: 90)
     turtle.penDown()
 }
@@ -125,6 +131,8 @@ func drawColumnOfArrows() {
 for _ in 1...3 {
     drawColumnOfArrows()
 }
+
+turtle.copySVGToClipboard()
     
     
 
