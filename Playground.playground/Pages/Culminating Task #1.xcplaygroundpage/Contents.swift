@@ -17,7 +17,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
 let preferredWidth = 450
-let preferredHeight = 600
+let preferredHeight = 625
 /*:
  ## Required code
  
@@ -54,6 +54,7 @@ turtle.left(by: 90)
 turtle.forward(steps: 75)
 turtle.right(by: 90)
 turtle.penDown()
+//turtle.setPenColor(to: .red)
 
 func drawStar() {
     turtle.forward(steps: 30)
@@ -86,10 +87,11 @@ func drawStar() {
     turtle.penDown()
 }
 
+//
 //for _ in 1...5{
 //    drawStar()
 //}
-
+//
 //func drawRowOfStars(){
 //    for _ in 1...5{
 //        drawStar()
@@ -106,23 +108,55 @@ func drawStar() {
 //for _ in 1...5 {
 //    drawRowOfStars()
 //}
-//
 
-func drawRowOfStars(){
+
+func drawRowOfStars2(){
     for _ in 1...5{
         drawStar()
     }
     turtle.penUp()
     turtle.left(by: 180)
-    turtle.forward(steps: 405)
+    turtle.forward(steps: 450)
     turtle.right(by: 90)
-    turtle.forward(steps: 75)
+    turtle.forward(steps: 150)
     turtle.right(by: 90)
     turtle.penDown()
 }
 
-for _ in 1...8 {
-    drawRowOfStars()
+for _ in 1...4 {
+    drawRowOfStars2()
+}
+turtle.setPosition(to: Point(x: 0, y: 0))
+
+
+
+
+
+func drawRowOfStars3(){
+    for _ in 1...6{
+        drawStar()
+    }
+    turtle.penUp()
+    turtle.left(by: 180)
+    turtle.forward(steps: 540)
+    turtle.right(by: 90)
+    turtle.forward(steps: 150)
+    turtle.right(by: 90)
+    turtle.penDown()
+}
+
+//turtle.setPenColor(to: .blue)
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 150)
+turtle.penDown()
+turtle.left(by: 90)
+turtle.forward(steps: 45)
+turtle.right(by: 180)
+turtle.penDown()
+
+for _ in 1...4 {
+    drawRowOfStars3()
 }
 
 
