@@ -17,7 +17,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
 let preferredWidth = 450
-let preferredHeight = 500
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -90,21 +90,42 @@ func drawStar() {
 //    drawStar()
 //}
 
+//func drawRowOfStars(){
+//    for _ in 1...5{
+//        drawStar()
+//    }
+//    turtle.penUp()
+//    turtle.left(by: 180)
+//    turtle.forward(steps: 450)
+//    turtle.right(by: 90)
+//    turtle.forward(steps: 100)
+//    turtle.right(by: 90)
+//    turtle.penDown()
+//}
+//
+//for _ in 1...5 {
+//    drawRowOfStars()
+//}
+//
+
 func drawRowOfStars(){
     for _ in 1...5{
         drawStar()
     }
     turtle.penUp()
     turtle.left(by: 180)
-    turtle.forward(steps: 450)
+    turtle.forward(steps: 405)
     turtle.right(by: 90)
-    turtle.forward(steps: 100)
+    turtle.forward(steps: 75)
     turtle.right(by: 90)
     turtle.penDown()
 }
 
-for _ in 1...5 {
+for _ in 1...8 {
     drawRowOfStars()
 }
+
+
+
 
 
