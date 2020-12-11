@@ -114,6 +114,7 @@ func drawArrow() {
     
 }
 
+
 // Create a function of a column of arrow
 func drawColumnOfArrows() {
     
@@ -128,12 +129,13 @@ func drawColumnOfArrows() {
     turtle.penDown()
 }
 
+
 for _ in 1...3 {
     drawColumnOfArrows()
 }
 
 turtle.copySVGToClipboard()
-    
+
     
 
 

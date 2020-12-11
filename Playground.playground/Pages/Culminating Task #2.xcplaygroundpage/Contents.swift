@@ -16,8 +16,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 300
-let preferredHeight = 600
+let preferredWidth = 600
+let preferredHeight = 660
 /*:
  ## Required code
  
@@ -44,9 +44,44 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+let turtle = Tortoise(drawingUpon: canvas)
+turtle.penUp()
+turtle.forward(steps: 100)
+turtle.left(by: 90)
+turtle.forward(steps: 220)
+turtle.right(by: 135)
+turtle.penDown()
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+func drawTree(){
+    turtle.forward(steps: 85)
+    turtle.right(by: 135)
+    turtle.forward(steps: 25)
+    turtle.left(by: 120)
+    turtle.forward(steps: 90)
+    turtle.right(by: 120)
+    turtle.forward(steps: 25)
+    turtle.left(by: 120)
+    turtle.forward(steps: 90)
+    turtle.right(by: 120)
+    turtle.forward(steps: 200)
+    turtle.right(by: 120)
+    turtle.forward(steps: 90)
+    turtle.left(by: 120)
+    turtle.forward(steps: 25)
+    turtle.right(by: 120)
+    turtle.forward(steps: 90)
+    turtle.left(by: 120)
+    turtle.forward(steps: 25)
+    turtle.right(by: 135)
+    turtle.forward(steps: 85)
+    turtle.right(by: 90)
+    
+    turtle.penUp()
+    turtle.left(by: 45)
+    turtle.forward(steps: 200)
+    turtle.right(by: 45)
+    turtle.penDown()
+}
 
 /*:
  ## Show the Assistant Editor

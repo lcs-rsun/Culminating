@@ -42,7 +42,7 @@ PlaygroundPage.current.liveView = canvas
  You can remove the code on line 49 and begin writing your own code.
  
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 // Creaet a turtle to use
@@ -87,10 +87,10 @@ func drawStar() {
     turtle.penDown()
 }
 
-//
-//for _ in 1...5{
-//    drawStar()
-//}
+
+////for _ in 1...5{
+////    drawStar()
+////}
 //
 //func drawRowOfStars(){
 //    for _ in 1...5{
@@ -126,11 +126,9 @@ func drawRowOfStars2(){
 for _ in 1...4 {
     drawRowOfStars2()
 }
+turtle.penUp()
 turtle.setPosition(to: Point(x: 0, y: 0))
-
-
-
-
+turtle.penDown()
 
 func drawRowOfStars3(){
     for _ in 1...6{
@@ -161,5 +159,5 @@ for _ in 1...4 {
 
 
 
-
-
+//turtle.copySVGToClipboard()
+//
